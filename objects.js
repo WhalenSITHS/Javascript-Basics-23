@@ -72,5 +72,10 @@ const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 //arrow function ()=> auto returns output, this keyword points global
 //numbers.forEach((number, index) => console.log(number, index));
 //students.forEach((student) => console.log(student.firstName));
-const current = students.filter((student) => student.graduated !== true);
-console.log(current);
+students.forEach((student) =>
+  student.siblings.forEach((sib) => console.log(sib))
+);
+
+students
+  .filter((student) => student.graduated)
+  .forEach((el) => console.log(el.firstName));
