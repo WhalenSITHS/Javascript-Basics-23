@@ -7,4 +7,3 @@ async function getData() {
   data.results.forEach((movie) => console.log(movie));
 }
 getData();
-//changes
