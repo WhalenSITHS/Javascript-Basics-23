@@ -16,8 +16,16 @@ function needle(fname, search) {
 console.log(needle(fname, "Vic"));
  */
 
-function sortString(fname) {
+/* function sortString(fname) {
   let x = [...fname].sort();
   console.log(x);
 }
 sortString(fname);
+ */
+
+function removeL(name) {
+  let x = Array.from(name);
+  x.splice(-1);
+  console.log(x);
+}
+removeL(fname);
