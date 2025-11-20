@@ -1,6 +1,15 @@
-def add(x,y):
-    return(x + y)
+def isValid(email, password):
+    if "@" not in email:
+        return "Not valid email"
+    if not isinstance(email, str) or not isinstance(password, str):
+        return "Error: email and password must be strings" 
+    
 
-data_sept = add(4,6)
-data_oct= add(data_sept, 60)
-print(data_oct)
+    return {'email':email, 'password':password}
+print(isValid("test@gmail.com", "test"))
+
+
+def add(x,y):
+    return x + y
+
+z = add(4,5)
