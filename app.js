@@ -1,6 +1,14 @@
-function slots(q, m1, m2, m3) {}
-
-function takeNumber(num, list) {}
-
-slots(48, 3, 10, 5);
-takeNumber(23, ["TAKE", "TAKE", "SERVE", "CLOSE"]);
+async function getData() {
+  try {
+    const response = await fetch("https://api.magicthegathering.io/v1/cards");
+    if (response.status != 200) {
+      throw new Error(response);
+    } else {
+      const data = await response.json();
+      data.cards.forEach((card) => console.log(card));
+    }
+  } catch (error) {
+    console.log(error);
+  }
+}
+getData();
